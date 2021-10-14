@@ -1,0 +1,21 @@
+--> Setup the Kafka and Zookeeper from the following Portal
+https://www.javatpoint.com/installation-of-apache-kafka
+
+--> Start the Zookeper server
+zookeeper-server-start.bat config\zookeeper.properties
+
+--> Start the Kafka server
+kafka-server-start.bat config\server.properties
+
+--> Create the topic
+kafka-topics --zookeeper localhost:2181 --create --topic MyFirstTopic1 --partitions 2 --replication-factor 1
+
+
+--> Check the topic is created or not
+kafka-topics.bat --list --zookeeper localhost:2181
+
+--> Start the consumer class
+ Then the consumer class will listens to the topic for new messages
+ 
+ --> Start the producer class
+ Producer class will produce some dummy messages to the topic
